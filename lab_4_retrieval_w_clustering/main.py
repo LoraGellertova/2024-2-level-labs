@@ -517,7 +517,7 @@ class KMeans:
                    for cluster in self.__clusters)
 
     def _is_convergence_reached(
-            self, new_clusters: list[ClusterDTO], threshold: float = 1e-07
+        self, new_clusters: list[ClusterDTO], threshold: float = 1e-07
     ) -> bool:
         """
         Check the convergence of centroids.
@@ -648,7 +648,7 @@ class VectorDBEngine:
         self._engine.index_documents(db.get_raw_documents())
 
     def retrieve_relevant_documents(
-            self, query: str, n_neighbours: int
+        self, query: str, n_neighbours: int
     ) -> list[tuple[float, str]] | None:
         """
         Index documents for retriever.
